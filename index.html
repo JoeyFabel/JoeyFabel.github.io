@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ace's Website</title>
+<style>
+	#paragraph {
+	color: red;
+    font-family: Broadway;
+    font-size: 2em;
+	}
+
+    #title-heading {
+        font-family: 'Showcard Gothic', fantasy;
+        font-size: 5em;
+        color: goldenrod;
+        font-weight: 800;
+        font-style: italic;
+    }
+
+	.tab {
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: #f1f1f1;
+	}
+
+	.tab button {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+	}
+
+	.tab button:hover {
+	background-color: #ddd;
+	}
+
+	.tab button.active {
+	background-color: #ccc
+	}
+
+	.tabcontent {
+	display: none;
+	padding: 6px 12px;
+	border: 1px solid #ccc;
+	border-top: none;
+	}
+
+    #ace-description {
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+ </style>
+</head>
+<body>
+
+    <h1 id="title-heading">My First Website</h1>
+    <!--target="blank" opens in new tab;
+    without that, it opens on same page-->
+    <a target="_blank" href="https://mail.google.com/mail"> This is a link!</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Pet Names</th>
+                <th>Species</th>
+                <th>Color</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ace</td>
+                <td>Dog</td>
+                <td>Black with a white patch</td>     
+            </tr>
+            <tr>
+                <td>Skippy</td>
+                <td>Dog</td>
+                <td>White with brown spots</td>
+            </tr>
+            <tr>
+                <td>Kevin</td>
+                <td>Parakeet</td>
+                <td>Blue</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <p id="paragraph"> This is my <em>first</em> website. <br> I hope it is cool! I hope you <strong>enjoy</strong> it! </p>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'TabOne')">Ace</button>
+        <button class="tablinks" onclick="openTab(event, 'TabTwo')">Tab Two</button>
+        <button class="tablinks" onclick="openTab(event, 'TabThree')">Tab Three</button>
+    </div>
+
+    <div id="TabOne" class="tabcontent">
+        <h3>Aseop</h3>
+        <img src="https://cvws.icloud-content.com/B/AadroD6arGNYGg7k91CH0Uz3HpDbAbj0-z6O2XHsq0Vy8MGHr4-Bzbf9/IMG_0262.jpeg?o=Ar1PFHHwvFl43c_WgmBAJmD3j7CioS7yXKDnS8d9ljbk&v=1&x=3&a=CAoguhXMhJ6YSZXWcSFIdPgqRX1RcnNx3Am7XXlYPi1SvDwSHRCv6e2M0i0Yr8bJjtItIgEAUgT3HpDbWgSBzbf9&e=1568230499&k=IktdWgomzlGG13GIMq_y3g&fl=&r=41fbbe39-c636-4bf4-827c-11d48fcd4d6f-1&ckc=com.apple.photos.cloud&ckz=PrimarySync&p=39&s=C-5ssoae79k5bPNjDIvS3VkeXA8&dsid=10044036338&clientId=FA03F73F-5C4E-4638-96BA-99FA6BF6AF2D" width="500"/>
+        <img src="https://cvws.icloud-content.com/B/AXvVOCh5ekY5xn9a0NqWirQM-F7VAXT-1Eb_dPRQuvU2ZqIX9FrJQud0/IMG_0061.jpeg?o=ApzPlt8l_qpNbqsF1ivOXtjZFzXBar6e6h1w_D4PKgEs&v=1&x=3&a=CAog7cYsIOlUDjkM5zM_SAByS7PONCMNpg2xPXkick39DpYSHRC22feM0i0YtrbTjtItIgEAUgQM-F7VWgTJQud0&e=1568230660&k=0V-rjjFOcM9R6OcUIRvkSA&fl=&r=53c75090-9492-49ea-a102-e6a92138a3de-1&ckc=com.apple.photos.cloud&ckz=PrimarySync&p=39&s=Hh3zvM4NIJ064enAbtr3XtVNClY&dsid=10044036338&clientId=FA03F73F-5C4E-4638-96BA-99FA6BF6AF2D" width="500" />
+        <img src="https://cvws.icloud-content.com/B/AVKa2FIWudKdwNhlIzhKtsmmV7x2Abq1wc1unC89b-2KU0r6mUDjuDV-/IMG_0038.jpeg?o=AnqwQbFG74-CQ4RkHc2Pe2xl7abhp7aXpZN7PDwvivJg&v=1&x=3&a=CAog04fVWqZOPkT63vZ6byRutFFOXmGgeEXMzqiXxKDRVLMSHRDbjv2M0i0Y2-vYjtItIgEAUgSmV7x2WgTjuDV-&e=1568230749&k=2tL6Zz0RGphpfGmoC3x5kw&fl=&r=5ade05ea-2a6c-448c-ab0b-da42b171a7f2-1&ckc=com.apple.photos.cloud&ckz=PrimarySync&p=39&s=nF_tklfF-yUK3NuQQ9G55dADiOU&dsid=10044036338&clientId=FA03F73F-5C4E-4638-96BA-99FA6BF6AF2D" width="500" />
+        <h3 id="ace-description">Ace is a <em>big</em> Chungus!</h3>
+    </div>
+
+    <div id="TabTwo" class="tabcontent">
+        <h3>Tab Two</h3>
+        <p>This is my second tab!</p>
+    </div>
+
+    <div id="TabThree" class="tabcontent">
+        <h3>Tab Two</h3>
+        <p>This is my third tab!!!</p>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            //Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            //Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+
+        }
+    </script>
+
+</body>
+</html>
