@@ -3,7 +3,7 @@
 <head>
 <title>Ace's Website</title>
 <style>
-	#paragraph {
+	#welcome {
 	color: red;
     font-family: Broadway;
     font-size: 2em;
@@ -15,6 +15,27 @@
         color: goldenrod;
         font-weight: 800;
         font-style: italic;
+        text-shadow: 10px 20px 5px #000000;  
+        position: relative;
+        animation: welcomeAnimation 2s ease-in normal, constantColorChange 2s linear normal 2s infinite;
+        /*animation: constantColorChange 2s linear normal 2s infinite;*/
+
+    }
+
+    @keyframes welcomeAnimation {
+        0% {color: red; left:0px; top:0px;}
+        25% {color: mediumvioletred; left:50px; top:0px;}
+        50% {color: blueviolet; left:10px; top:50px;}
+        75% {color: lightseagreen; left:0px; top:0px;}
+        100% {color: green; left:0px; top:0px;}
+    }
+    @keyframes constantColorChange {
+        0% {color: red;}
+        20% {color: mediumvioletred;}
+        40% {color:blueviolet;}
+        60% {color: lightseagreen;}
+        80% {color: forestgreen;}
+        100% {color:red;}
     }
 
 	.tab {
@@ -52,6 +73,10 @@
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
+    .pet-photo {
+        border: 10px ridge green;
+    }
+
  </style>
 </head>
 <body>
@@ -61,7 +86,7 @@
     without that, it opens on same page-->
     <a target="_blank" href="https://mail.google.com/mail"> This is a link!</a>
 
-    <table>
+    <!--Table--><!--    <table>
         <thead>
             <tr>
                 <th>Pet Names</th>
@@ -87,10 +112,11 @@
             </tr>
         </tbody>
     </table>
+-->
 
+    <p id="welcome"> This is my <em>first</em> website. <br> I hope it is cool! I hope you <strong>enjoy</strong> it! </p>
 
-    <p id="paragraph"> This is my <em>first</em> website. <br> I hope it is cool! I hope you <strong>enjoy</strong> it! </p>
-
+    <!--Tabs-->
     <div class="tab">
         <button class="tablinks" onclick="openTab(event, 'TabOne')">Ace</button>
         <button class="tablinks" onclick="openTab(event, 'TabTwo')">Tab Two</button>
@@ -98,9 +124,8 @@
     </div>
 
     <div id="TabOne" class="tabcontent">
-        <h3>Aseop</h3>
-        <img src="Images/Ace2.JPG" width="500" />
-        <img src="Images/Ace4.jpg" height="835" />
+        <img class="pet-photo" src="Images/Ace2.jpg" width="500" />
+        <img class="pet-photo" src="Images/Ace4.jpg" height="835" />
         <h3 id="ace-description">Ace is a <em>big</em> Chungus!</h3>
     </div>
 
