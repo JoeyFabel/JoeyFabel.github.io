@@ -19,7 +19,6 @@
         position: relative;
         animation: welcomeAnimation 2s ease-in normal, constantColorChange 2s linear normal 2s infinite;
         /*animation: constantColorChange 2s linear normal 2s infinite;*/
-
     }
 
     @keyframes welcomeAnimation {
@@ -69,75 +68,97 @@
 	border-top: none;
 	}
 
-    #ace-description {
+    #dog-description {
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
     .pet-photo {
         border: 10px ridge green;
+        height: 835px;
+    }
+
+    .dog-emphasis {
+        font-style: italic;
+        font-size: 1.5em;
+    }
+    #test {
+        color: rosybrown;
+    }
+
+    p .dog-word {
+        border-top: 5px dashed goldenrod;
+        border-bottom: 5px dashed goldenrod;
     }
 
  </style>
 </head>
 <body>
 
+    <nav>
+        <ul>
+            <li><a href="ace-page.html">Ace's Page</a></li>
+            <li><a href="skippy-page.html">Skippy's Page</a></li>
+        </ul>
+    </nav>
+
+
     <h1 id="title-heading">My First Website</h1>
-    <!--target="blank" opens in new tab;
-    without that, it opens on same page-->
-    <a target="_blank" href="https://mail.google.com/mail"> This is a link!</a>
 
-    <!--Table--><!--    <table>
-        <thead>
-            <tr>
-                <th>Pet Names</th>
-                <th>Species</th>
-                <th>Color</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Ace</td>
-                <td>Dog</td>
-                <td>Black with a white patch</td>     
-            </tr>
-            <tr>
-                <td>Skippy</td>
-                <td>Dog</td>
-                <td>White with brown spots</td>
-            </tr>
-            <tr>
-                <td>Kevin</td>
-                <td>Parakeet</td>
-                <td>Blue</td>
-            </tr>
-        </tbody>
-    </table>
--->
+    <!--Table-->
+    <!--    <table>
+            <thead>
+                <tr>
+                    <th>Pet Names</th>
+                    <th>Species</th>
+                    <th>Color</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ace</td>
+                    <td>Dog</td>
+                    <td>Black with a white patch</td>
+                </tr>
+                <tr>
+                    <td>Skippy</td>
+                    <td>Dog</td>
+                    <td>White with brown spots</td>
+                </tr>
+                <tr>
+                    <td>Kevin</td>
+                    <td>Parakeet</td>
+                    <td>Blue</td>
+                </tr>
+            </tbody>
+        </table>
+    -->
 
-    <p id="welcome"> This is my <em>first</em> website. <br> I hope it is cool! I hope you <strong>enjoy</strong> it! </p>
+    <p id="welcome"> This is a website all about two <em>dogs!</em><br> Click on one of the tabs to see a description of that dog!</p>
 
     <!--Tabs-->
     <div class="tab">
         <button class="tablinks" onclick="openTab(event, 'TabOne')">Ace</button>
-        <button class="tablinks" onclick="openTab(event, 'TabTwo')">Tab Two</button>
-        <button class="tablinks" onclick="openTab(event, 'TabThree')">Tab Three</button>
+        <button class="tablinks" onclick="openTab(event, 'TabTwo')">Skippy</button>
     </div>
 
     <div id="TabOne" class="tabcontent">
-        <img class="pet-photo" src="Images/Ace.jpg" width="500" />
-        <img class="pet-photo" src="Images/Ace4.jpg" height="835" />
-        <h3 id="ace-description">Ace is a <em>big</em> Chungus!</h3>
+        <img class="pet-photo" src="Images/Ace.jpg" />
+        <img class="pet-photo" src="Images/Ace4.jpg" />
+        <h3 id="dog-description">Ace is a <span class="dog-emphasis">big</span> Chungus!</h3>
+        <button id="ace-button" onclick="openPage(event, 'AcePage')">Ace's page</button>
     </div>
 
     <div id="TabTwo" class="tabcontent">
-        <h3>Tab Two</h3>
-        <p>This is my second tab!</p>
+        <h3>Skippy</h3>
+        <img class="pet-photo" src="Images/skippy3.jpg"/>
+        <img class="pet-photo" src="Images/skippy2.jpg"/>
+        <h3 id="dog-description">Skippy is a <span class="dog-emphasis">little</span> drippy!</h3>
     </div>
-
-    <div id="TabThree" class="tabcontent">
-        <h3>Tab Two</h3>
-        <p>This is my third tab!!!</p>
-    </div>
+    <!--Took this out for now as I am only using two tabs-->
+    <!--  <div id="TabThree" class="tabcontent">
+          <h3>Tab Two</h3>
+          <p>This is my third tab!!!</p>
+      </div>   -->
 
     <script>
         function openTab(evt, tabName) {
@@ -161,7 +182,11 @@
             document.getElementById(tabName).style.display = "block";
             evt.currentTarget.className += " active";
 
-        }
+            }
+
+    function openPage(evt, pageName) {
+
+    }
     </script>
 
 </body>
