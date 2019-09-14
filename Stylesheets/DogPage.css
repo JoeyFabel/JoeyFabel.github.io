@@ -1,0 +1,62 @@
+        #fancy-name {
+            font-weight: bold;
+            font-size: 2em;
+            color: orangered;
+            font-family: 'Old English Text MT', Algerian;
+        }
+        #fancy-name:hover {
+            color:chartreuse;
+        }
+
+        .welcome {
+            color: dodgerblue;
+            font-family: 'Old English Text MT', 'Copperplate Gothic', Arial;
+        }
+
+        .dog-photo {
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            float: right;
+            right: 0px;
+            top: 0px;
+            z-index: -1;
+        }
+
+        .float-test {
+            position: relative;
+            float: right;
+            right: 15px;
+            top: 15px;
+        }
+
+        #back-link {
+            color: deepskyblue;
+        }
+
+        .list-item {
+            background-color: green;
+            opacity: 0.9
+        }
+        .description h3 {
+            color: goldenrod;
+        }
+        .fact-list {
+            border: 5px double black;
+            background-color: green;
+            opacity: 0.9;
+            width:20%;
+            color: darkred;
+        }
+        #facts {
+            color:goldenrod;
+        }
+        #fun {
+            color: blue;
+        }
+        #tricks {
+            color: fuchsia;
+        }
+        #additional-info {
+            color:blanchedalmond;
+        }
