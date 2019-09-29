@@ -94,12 +94,12 @@
 </head>
 <body>
 
-    <nav>
+   <!--<nav>
         <ul>
             <li><a href="ace-page.html">Ace's Page</a></li>
             <li><a href="skippy-page.html">Skippy's Page</a></li>
         </ul>
-    </nav>
+    </nav>-->
 
 
     <h1 id="title-heading">My First Website</h1>
@@ -139,13 +139,14 @@
     <div class="tab">
         <button class="tablinks" onclick="openTab(event, 'TabOne')">Ace</button>
         <button class="tablinks" onclick="openTab(event, 'TabTwo')">Skippy</button>
+        <button onclick="breakPage()">Don't click me</button>
     </div>
 
     <div id="TabOne" class="tabcontent">
         <img class="pet-photo" src="Images/Ace.jpg" />
         <img class="pet-photo" src="Images/Ace4.jpg" />
         <h3 id="dog-description">Ace is a <span class="dog-emphasis">big</span> Chungus!</h3>
-        <button id="ace-button" onclick="openPage(event, 'AcePage')">Ace's page</button>
+        <button class="dog-button" onclick="openPage('ace-page.html')">Ace's Page</button>
     </div>
 
     <div id="TabTwo" class="tabcontent">
@@ -153,6 +154,7 @@
         <img class="pet-photo" src="Images/skippy3.jpg"/>
         <img class="pet-photo" src="Images/skippy2.jpg"/>
         <h3 id="dog-description">Skippy is a <span class="dog-emphasis">little</span> drippy!</h3>
+        <button class="dog-button" onclick="openPage('skippy-page.html')">Skippy's Page</button>
     </div>
     <!--Took this out for now as I am only using two tabs-->
     <!--  <div id="TabThree" class="tabcontent">
@@ -182,9 +184,15 @@
             document.getElementById(tabName).style.display = "block";
             evt.currentTarget.className += " active";
 
-            }
+        }
 
-    function openPage(evt, pageName) {
+        function openPage(page) {
+            window.location.href = page;
+        }
+
+         function breakPage() {
+
+            document.body.innerHTML = "An error has occured :(";
 
     }
     </script>
