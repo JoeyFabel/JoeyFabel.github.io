@@ -69,7 +69,7 @@
     </style>
 </head>
 <body>
-     <img class="dog-photo" src="Images/Ace3.jpg" />
+     <img id="background-image" class="dog-photo" src="Images/Ace3.jpg" />
 
     <h1 class="welcome">This page is all about <span id="fancy-name">Ace</span>!</h1>
 
@@ -81,7 +81,7 @@
             <li>His full name is Aesop</li>
             <li>He is a Coton De Tulear</li>
             <li>He weighs about 20 pounds</li>
-            <li>His breed is the official dog of Madagascar</li>
+	    <li>His breed is the official dog of Madagascar</li>
             <li>More info about Cotons can be found <a target="_blank" href="https://www.akc.org/dog-breeds/coton-de-tulear/">here</a></li>
         </ul>
     </div>
@@ -117,6 +117,29 @@
         </div>
     </div>
 
+
+    <script>
+        var backgroundImage = document.querySelector("#background-image");
+            var images = ["Images/Ace3.jpg"];
+            var currentImageNumber = 0;
+
+        backgroundImage.src = images[currentImageNumber];
+
+        window.setInterval(changeBackgroundImage, 5000)
+
+         function changeBackgroundImage() {
+          //  var backgroundImage = document.querySelector("#background-image");
+          //  var images = ["Images/skippy4.jpg", "Images/skippy5.jpg"];
+         //   var currentImageNumber = 0;
+             if (currentImageNumber < images.length - 1) {
+                 currentImageNumber++;
+             } else {
+                 currentImageNumber = 0;
+             }
+             console.log(currentImageNumber);
+             backgroundImage.src = images[currentImageNumber];
+        }
+    </script>
 </body>
 
 
