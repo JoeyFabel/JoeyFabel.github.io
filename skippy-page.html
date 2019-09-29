@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skippy's Page</title>
+    <link rel="stylesheet" type="text/css" href="Stylesheets/DogPage.css" />
+</head>
+<body>
+    <img id="background-image" class="dog-photo" src="Images/skippy4.jpg" />
+
+    <button onclick="changeBackgroundImage()">click bait</button>
+
+    <h1 class="welcome">This page is all about <span id="fancy-name">Skippy</span>!</h1>
+
+    <a href="index.html"><h4 id="back-link">click here to go back to main page</h4></a>
+
+    <div class="description">
+        <h3 id="facts">Facts about Skippy:</h3>
+        <ul class="fact-list">
+            <li>His full name is Amore Skipper</li>
+            <li>He is a Havanese</li>
+            <li>He weighs about 12 pounds</li>
+            <li>His breed originally came from Cuba.</li>
+            <li>More info about Havanese can be found <a target="_blank" href="https://www.akc.org/dog-breeds/havanese/">here</a></li>
+        </ul>
+    </div>
+    <div class="description">
+        <h3 id="fun">What Skippy does for fun:</h3>
+        <ol type="I" class="fact-list">
+            <li>Skippy sleeps in his bed.</li>
+            <li>Skippy plays fetch.</li>
+            <li>Skippy pulls his toys apart.</li>
+            <li>Skippy chews his paws.</li>
+        </ol>
+    </div>
+    <div class="description">
+        <h3 id="tricks">Tricks that Skippy can do:</h3>
+        <ul class="fact-list">
+            <li>Sit</li>
+            <li>Lie Down</li>
+            <li>Go to bed</li>
+        </ul>
+    </div>
+    <div class="description">
+        <h3 id="additional-info">Additional Information:</h3>
+        <div class="fact-list">
+            <p>
+                Skippy is a very dumb dog. He can also be very hyper.
+                He likes to hang around other people and sit in their lap.
+                If he gets too excited, though, he will leak (he is a leaky dog).
+            </p>
+
+            <p>
+                He will normally spend his days alternating between sleeping on the couch,
+                sleeping on someone's lap, sleeping in his bed, and playing with his toys.
+                He likes to play games, but he is pretty bad when it comes to tricks.
+            </p>
+        </div>
+    </div>
+    <script>
+        var backgroundImage = document.querySelector("#background-image");
+        var images = ["Images/skippy4.jpg", "Images/skippy5.jpg"];
+        var currentImageNumber = 0;
+
+        backgroundImage.src = images[currentImageNumber];
+
+        window.setInterval(changeBackgroundImage, 5000)
+
+        function changeBackgroundImage() {
+            //  var backgroundImage = document.querySelector("#background-image");
+            //  var images = ["Images/skippy4.jpg", "Images/skippy5.jpg"];
+            //   var currentImageNumber = 0;
+            if (currentImageNumber < images.length - 1) {
+                currentImageNumber++;
+            } else {
+                currentImageNumber = 0;
+            }
+            console.log(currentImageNumber);
+            backgroundImage.src = images[currentImageNumber];
+        }
+
+    </script>
+</body>
+</html>
